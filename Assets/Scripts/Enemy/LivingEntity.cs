@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class LivingEntity : MonoBehaviour, IDamageable
     [SerializeField] private float startingHealth;
     protected float health;
     protected bool dead;
+
+    public Action OnDeath;
 
     protected virtual void Start()
     {
@@ -25,6 +28,12 @@ public class LivingEntity : MonoBehaviour, IDamageable
     protected virtual void Die()
     {
         dead = true;
+        if(OnDeath != null)
+        {
+            OnDeath();
+        }
         Destroy(gameObject);
     }
+
+
 }

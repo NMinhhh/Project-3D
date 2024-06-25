@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Enemy : LivingEntity
 {
     NavMeshAgent agent;
     Transform target;
+
 
     protected override void Start()
     {
