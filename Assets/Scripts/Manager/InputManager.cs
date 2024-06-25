@@ -24,7 +24,8 @@ public class InputManager : MonoBehaviour
     public float xInput {  get; private set; }
 
     public float zInput {  get; private set; }
-
+    
+    public bool jumpInput {  get; private set; }
 
 
     void Start()
@@ -36,6 +37,7 @@ public class InputManager : MonoBehaviour
     {
         xInput = Input.GetAxisRaw("Horizontal");
         zInput = Input.GetAxisRaw("Vertical");
+        jumpInput = Input.GetKeyDown(KeyCode.Space);
     }
 
 }
