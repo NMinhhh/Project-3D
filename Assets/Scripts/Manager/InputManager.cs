@@ -27,6 +27,7 @@ public class InputManager : MonoBehaviour
     
     public bool jumpInput {  get; private set; }
 
+    public bool shootInput {  get; private set; }
 
     void Start()
     {
@@ -38,6 +39,7 @@ public class InputManager : MonoBehaviour
         xInput = Input.GetAxisRaw("Horizontal");
         zInput = Input.GetAxisRaw("Vertical");
         jumpInput = Input.GetKeyDown(KeyCode.Space);
+        shootInput = Input.GetMouseButtonDown(0);
     }
 
 }

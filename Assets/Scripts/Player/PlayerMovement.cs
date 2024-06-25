@@ -16,10 +16,11 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
 
     private CharacterController characterController;
-
+    GunController gunController;
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        gunController = GetComponent<GunController>();
     }
 
     // Update is called once per frame
@@ -27,6 +28,15 @@ public class PlayerMovement : MonoBehaviour
     {
         Movement();
         Jump();
+        Shoot();
+    }
+
+    void Shoot()
+    {
+        if(InputManager.Instance.shootInput)
+        {
+            gunController.Shoot();
+        }
     }
 
     void Jump()
