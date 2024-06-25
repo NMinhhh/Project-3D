@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
+public class Enemy : LivingEntity
 {
     NavMeshAgent agent;
     Transform target;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         agent = GetComponent<NavMeshAgent>();
         target = GameObject.FindGameObjectWithTag("Player").transform;
         StartCoroutine(UpdatePath());
@@ -21,7 +22,8 @@ public class Enemy : MonoBehaviour
         while(target != null)
         {
             Vector3 targetPos = new Vector3 (target.position.x, 0, target.position.z);
-            agent.SetDestination(targetPos);
+            if(!dead)
+                agent.SetDestination(targetPos);
             yield return new WaitForSeconds(timer);
 
         }

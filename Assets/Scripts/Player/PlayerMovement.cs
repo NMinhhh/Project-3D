@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : LivingEntity
 {
     [SerializeField] private float movementSpeed;
 
@@ -17,8 +17,9 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController characterController;
     GunController gunController;
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         characterController = GetComponent<CharacterController>();
         gunController = GetComponent<GunController>();
     }

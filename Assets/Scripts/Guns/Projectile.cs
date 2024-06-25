@@ -5,6 +5,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private float damage;
     [SerializeField] private LayerMask whatIsEnemy;
     public void SetSpeed(float speed)
     {
@@ -29,13 +30,17 @@ public class Projectile : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(ray, out hit, distance,whatIsEnemy,QueryTriggerInteraction.Collide))
         {
-            OutHit();
+            OutHit(hit);
         }
     }
 
-    void OutHit()
+    void OutHit(RaycastHit hit)
     {
-        Debug.Log("hit");
+        IDamageable damageableObj = hit.collider.GetComponent<IDamageable>();
+        if(damageableObj != null)
+        {
+            damageableObj.TakeHit(damage, hit);
+        }
         Destroy(gameObject);
     }
 

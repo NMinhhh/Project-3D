@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  damage: 2
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 256

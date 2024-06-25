@@ -770,6 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fd85eb7ecbc35d4591e0e35022a7227, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 10
 --- !u!1 &954786575
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,13 +904,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.53729963, y: 0, z: 0, w: 0.8433915}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalRotation: {x: 0.5735764, y: 0, z: 0, w: 0.8191521}
+  m_LocalPosition: {x: 0, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1364676735}
-  m_LocalEulerAnglesHint: {x: 65, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 70, y: 0, z: 0}
 --- !u!1 &1364676734
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,7 +937,7 @@ Transform:
   m_GameObject: {fileID: 1364676734}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10.64, z: -23.95}
+  m_LocalPosition: {x: 0, y: 18, z: -23.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -955,7 +956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6df39697a50543439f07a74e56598ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraHeight: 12
+  cameraHeight: 15
   playerBody: {fileID: 1649766698}
 --- !u!1 &1470818627
 GameObject:
@@ -1035,6 +1036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee33e6797a1b72499b964be00c32387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 10
   movementSpeed: 5
   gravity: -9.81
   jumpHeight: 5
