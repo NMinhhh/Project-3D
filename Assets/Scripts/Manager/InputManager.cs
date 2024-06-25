@@ -25,9 +25,10 @@ public class InputManager : MonoBehaviour
 
     public float zInput {  get; private set; }
 
+
+
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -36,4 +37,5 @@ public class InputManager : MonoBehaviour
         xInput = Input.GetAxisRaw("Horizontal");
         zInput = Input.GetAxisRaw("Vertical");
     }
+
 }
